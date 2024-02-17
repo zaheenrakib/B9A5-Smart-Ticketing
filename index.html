@@ -9,23 +9,121 @@
     <!-- Tailwind And Daisy Ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;80 family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Custom CSS Use Tailwind -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'bg-primary': 'red',
+                        'btn-primary': '#B68C5A',
+                        'color-primary': '#1DD100'
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
 </head>
 
-<body>
-    <header>
-        <h1 class="bg-red-950 text-2xl text-center text-white">Hello Smart Ticketing</h1>
+<body class="font-raleway">
+    <header class="px-20">
+        <nav class="container mx-auto">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home </a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-4xl font-bold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn">
+                        <span>Bus</span> <img src="images/bus-icon.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Start a Banner Section -->
+        <section>
+            <div class="flex justify-center items-center lg:ml-4">
+                <div
+                    class="bg-[url('images/banner.png')] w-full  h-[90vh] flex justify-center items-center bg-no-repeat">
+                    <div class="text-center lg:space-y-8">
+                        <h1 class="text-6xl lg:font-extrabold text-white">End-to-End Travel with <br><span
+                                class="text-color-primary">P Paribahan</span></h1>
+                        <p class="text-white w-2/3 mx-auto">Yes, you can run unit tests and view the results directly
+                            within the app. The integrated testing features allow for a streamlined.</p>
+                        <div>
+                            <button class="btn bg-color-primary border-none font-extrabold">Buy Tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Offers Section -->
+        <section class="mt-16">
+            <h1 class="text-center text-4xl font-bold">Best offers for you</h1>
+            <div class="flex mt-12 justify-evenly">
+                <!-- First Cupone -->
+                <div>
+                    <div class="card w-96 bg-yellow-400 text-black">
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Cookies!</h2>
+                            <p>We are using cookies for no reason.</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Accept</button>
+                                <button class="btn btn-ghost">Deny</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card w-96 bg-[#F78C9C] text-black">
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Cookies!</h2>
+                            <p>We are using cookies for no reason.</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Accept</button>
+                                <button class="btn btn-ghost">Deny</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="flex justify-center mt-12">
+                <button class="btn btn-outline btn-success">See All Offers</button>
+            </div>
+        </section>
     </header>
     <main>
 
