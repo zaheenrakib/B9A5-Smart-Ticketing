@@ -65,7 +65,7 @@
                 </div>
                 <div class="navbar-end">
                     <a class="btn">
-                        <span>Bus</span> <img src="images/bus-icon.png" alt="">
+                        <span class="text-color-primary">Bus</span> <img src="images/bus-icon.png" alt="">
                     </a>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                         <p class="text-white w-2/3 mx-auto">Yes, you can run unit tests and view the results directly
                             within the app. The integrated testing features allow for a streamlined.</p>
                         <div>
-                            <button class="btn bg-color-primary border-none font-extrabold">Buy Tickets</button>
+                            <button id="buy-tickets" class="btn bg-color-primary border-none font-extrabold">Buy Tickets</button>
                         </div>
                     </div>
                 </div>
@@ -95,56 +95,49 @@
             <h1 class="text-center text-4xl font-bold">Best offers for you</h1>
             <div class="flex mt-12 justify-evenly gap-5">
                 <!-- First Cupone -->
-                <div class="flex">
+                <div class="flex lg:flex-row flex-col divide-x-2 divide-dashed divide-white">
                     <div class="card  bg-yellow-400 text-black">
                         <div class="card-body items-center text-center">
-                            <h2 class="card-title">15% OFF</h2>
-                            <p>on your next purchase</p>
+                            <h2 class="card-title font-extrabold text-4xl">15% OFF</h2>
+                            <p class="font-bold">on your next purchase</p>
                             <p>use by January 2024</p>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute rounded-full w-10 h-10 bg-white -mt-8 -right-1"></div>
-                        </div>
-                    </div>
-                    <!-- <div class="relative">
-                        <div class="absolute rounded-full w-10 h-10 bg-white -mt-1 -right-2"></div>
-                    </div> -->
+                        </div>                        
+                    </div>                 
                     <div class="card  bg-yellow-400 text-black">
                         <div class="card-body items-center text-center">
-                            <h2 class="card-title">NEW15</h2>
+                            <h2 class="card-title  font-extrabold">NEW15</h2>
                             <p>Coupon Code</p>
                         </div>
                         <div class="relative">
-                            <div class="absolute rounded-full w-16 h-10 bg-white -mt-40  -left-10"></div>
+                            <div class="absolute rounded-full w-8 h-7 bg-white -mt-44  -left-4"></div>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute rounded-full w-8 h-8 bg-white -mt-4  -left-4"></div>
                         </div>
                     </div>
                 </div>
-                <div class="flex">
+                <!-- Second Coupon -->
+                <div class="flex divide-x-2 divide-dashed divide-white">
                     <div class="card  bg-[#F78C9C] text-black">
-                        
                         <div class="card-body items-center text-center">
-                            
-                            <h2 class="card-title">20% OFF</h2>
-                            <p>on your next purchase</p>
+                            <h2 class="card-title font-extrabold text-4xl">20% OFF</h2>
+                            <p class="font-bold">on your next purchase</p>
                             <p>use by January 2024</p>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute rounded-full w-16 h-10 bg-white -mt-8 -right-2"></div>
-                        </div>
-                    </div>   
-                    <div class="relative">
-                        <!-- <div class="absolute rounded-full w-10 h-10 bg-white -mt-1 -right-1"></div> -->
-                    </div>
-                    <div class="card bg-[#F78C9C] text-black">
+                        </div>                        
+                    </div> 
+                                   
+                    <div class="card  bg-[#F78C9C] text-black">
                         <div class="card-body items-center text-center">
-                            <h2 class="card-title">Couple 20</h2>                          
-                            <p>Coupon Code.</p>
+                            <h2 class="card-title font-extrabold">Couple 20</h2>
+                            <p>Coupon Code</p>
                         </div>
                         <div class="relative">
-                            <div class="absolute rounded-full w-16 h-10 bg-white -mt-40  -left-10"></div>
+                            <div class="absolute rounded-full w-8 h-7 bg-white -mt-44  -left-4"></div>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute rounded-full w-8 h-8 bg-white -mt-4  -left-4"></div>
                         </div>
                     </div>
-                    
                 </div>
 
             </div>
@@ -154,7 +147,7 @@
         </section>
     </header>
     <main>
-        <section class="mt-16 pb-14 bg-[#E7ECFF] border border-green-600 border-spacing-40 rounded-t-3xl">
+        <section id="ph-paribahan" class="mt-16 pb-14 bg-[#E7ECFF] border border-green-600 border-spacing-40 rounded-t-3xl">
             <!-- Heading Part -->
             <div class="text-center mt-20">
                 <h1 class="text-4xl font-bold">P.H Paribahan</h1>
@@ -163,9 +156,10 @@
             </div>
 
             <!-- Heading Card -->
-            <div class="flex justify-center mx-20 mt-10">
-                <div class="card w-full bg-white">
-                    <div class="flex">
+            <div class="flex justify-center mx-20 mt-10 divide-x-2 divide-dashed divide-green-400">
+                <div class="card bg-white">
+                    <div>
+                        
                         <div class="card-body">
                             <div class="flex justify-between">
                                 <!-- Left side -->
@@ -179,15 +173,18 @@
                                     </div>
                                 </div>
                                 <!-- Right Side -->
+                                
                                 <div>
                                     <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
                                         <img src="images/seat-green.png" alt="">
-                                        <p class="text-2xl"><span>40</span> Seats left</p>
+                                        <p class="text-2xl text-color-primary"><span>40</span> Seats left</p>
                                     </button>
                                 </div>
                             </div>
+                            
+                            
                             <!-- Second Card -->
-                            <div class="bg-[#a7cccc] text-black space-y-10 rounded-xl p-12">
+                            <div class="bg-[#e4d8e7] text-black space-y-10 rounded-xl p-12">
                                 <div class="flex justify-between ">
                                     <h1>Route</h1>
                                     <div>
@@ -208,35 +205,45 @@
                                     <button class="btn btn-wide">Est. Time - 11 Hour</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="flex-1 flex justify-center  items-center">
-                            <div class="text-black text-xl">
-                                <img src="images/fare.png" alt="">
-                                <h1><span>500</span> Taka</h1>
-                                <p>Per Seat</p>
-                            </div>
-                        </div>
+                        </div>               
                     </div>
                 </div>
+                <!-- Right Section -->
+                <div class="relative">
+                    <div class="absolute rounded-full w-20 h-16 bg-[#E7ECFF] -mt-8  -left-10"></div>
+                </div>
+                <div class="flex-1 flex justify-center  items-center bg-white rounded-xl">
+                    <div class="text-black text-center text-xl">
+                        <img src="images/fare.png" alt="">
+                        <h1 class="text-2xl font-extrabold"><span>550</span> Taka</h1>
+                        <p>Per Seat</p>
+                        <div class="relative">
+                            <div class="absolute rounded-full w-20 h-16 bg-[#E7ECFF] mt-40  -left-20"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </div>
+            
             <!-- Seat Layout -->
             <section class="mt-8">
                 <div class="mx-20 mt-10">
                     <div class="card w-full bg-white p-4">
-                        <div class="flex divide-x divide-dashed justify-between">
-                            <div class="w-3/5 p-6">
+                        <div class="flex divide-x-4 divide-dashed justify-between">
+                            <div class="w-3/5 p-6 divide-y-2 divide-dashed   space-y-4">
                                 <h1>Select Your Seat</h1>
-                                <div class="flex justify-between">
-                                    <div class="flex justify-center items-center gap-2">
+                                <div class="flex justify-between ">
+                                    <div class="flex justify-center space-y-4 items-center gap-2">
                                         <img src="images/seat-gray.png" alt="">
                                         <p>Available</p>
                                     </div>
                                     <div class="flex justify-center items-center gap-2">
                                         <img src="images/seat-green-filled.png" alt="">
-                                        <p>Selected</p>
+                                        <p class="text-color-primary">Selected</p>
                                     </div>
                                 </div>
-                                <div class="flex justify-end mt-2">
+                                <div class="flex  justify-end mt-2">
                                     <button class="btn btn-active btn-ghost">
                                         <img src="images/Vector.png" alt="">
                                     </button>
@@ -363,7 +370,7 @@
                                         class="input input-bordered w-full" />
                                     <label class="text-2xl" for="number">Phone Number <span
                                             class="text-4xl">*</span></label><br>
-                                    <input name="number" required type="text" placeholder="Enter your phone number"
+                                    <input name="number" type="number" required type="text" placeholder="Enter your phone number"
                                         class="input input-bordered w-full" />
                                     <label class="text-2xl" for="email">Email ID<span
                                             class="text-4xl">*</span></label><br>
