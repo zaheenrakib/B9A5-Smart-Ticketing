@@ -13,19 +13,25 @@ let count = 0;
 let totalSeat = 40;
 
 for (const seat of allSeat){
-    seat.addEventListener('click',function(){
+    seat.addEventListener('click',function(e){
+        
+        const curentValue = seat.innerHTML;
+        console.log(curentValue);
+
         
         seat.classList.add('btn-disabled');
         seat.classList.add('text-white');
 
-
         totalSeat = totalSeat - 1;
-        document.getElementById('total-seat').innerText = totalSeat;
+        setInnerText('total-seat',totalSeat);
 
         count = count + 1;
-        document.getElementById('seat-count').innerText = count;
-        if(count >= 4){
+        setInnerText('seat-count', count);
+
+        if(count === 4){
             Swal.fire("You Select Max Number");
+            count = count - 1;   
+            totalSeat = totalSeat + 1;        
         }
     })
 }
