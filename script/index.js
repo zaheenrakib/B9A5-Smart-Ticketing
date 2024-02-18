@@ -55,16 +55,10 @@ for (const seat of allSeat){
         setInnerText('seat-count', count);
 
 
-        const totalCost = document.getElementById('total-prices').innerText;
-        const convertTotal = parseInt(totalCost) + parseInt(fixedPrice);
+        totalCost('total-prices', fixedPrice);
 
-        const gradTotal = document.getElementById('grad-total').innerText;
-        const convertGradTotal = parseInt(gradTotal) + parseInt(fixedPrice);
+        gradTotalCost('grad-total' , fixedPrice);
 
-
-
-        setInnerText('total-prices' , convertTotal);
-        setInnerText('grad-total', convertGradTotal); 
 
         if(count >= 4){
             Swal.fire("You Select Max Number");
@@ -74,5 +68,23 @@ for (const seat of allSeat){
     })
 }
 
+
+const cuponCode = document.getElementById('coupon-btn');
+let couponValue = document.getElementById("coupon-value");
+cuponCode.addEventListener('click',function(){
+
+})
+
+
+
+//Next Button 
+const nextBtn = document.getElementById('next-btn');
+nextBtn.addEventListener('click',function(){
+    Swal.fire({
+        title: "SUCCESS",
+        text: "Thank you for Booking Our Bus Seats We are working hard to find the best service and deals for you. Shortly you will find a confirmation in your email.",
+        icon: "success"
+      });
+})
 
 

@@ -16,3 +16,14 @@ function setBackgroundColorById(elementId){
 function setInnerText(elementId,value){
     document.getElementById(elementId).innerText = value;
 }
+
+function totalCost (elementId,value){
+    const totalCost = document.getElementById(elementId).innerText;
+        const convertTotal = parseInt(totalCost) + parseInt(value);
+    setInnerText(elementId , convertTotal);
+}
+function gradTotalCost (elementId,value){
+    const totalCost = document.getElementById(elementId).innerText;
+        const convertTotal = parseInt(totalCost) + parseInt(value);
+    setInnerText(elementId , convertTotal);
+}
