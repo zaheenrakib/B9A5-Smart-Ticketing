@@ -129,6 +129,7 @@ cuponCode.addEventListener('click', function () {
             icon: 'error',
             confirmButtonText: 'Cool'
           })
+          window.location.reload();
     }
 
     cuponCode.classList.add('btn-disabled');
