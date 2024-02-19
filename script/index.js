@@ -5,11 +5,6 @@ buyTickects.addEventListener('click', function () {
     location.href = "#ph-paribahan";
 });
 
-// Hide Elements
-
-
-// Select Seat
-
 const allSeat = document.getElementsByClassName("btn-lg");
 let count = 0;
 let totalSeat = 40;
@@ -18,7 +13,7 @@ for (const seat of allSeat) {
     seat.addEventListener('click', function (e) {
 
         showButtonById('next-btn');
-
+        // seat.classList.add('');
         if (count < 4) {
             const curentValue = seat.innerHTML;
 
@@ -150,7 +145,7 @@ nextBtn.addEventListener('click', function () {
         icon: "success",
         timer: 1500
     });
-    window.location.reload();
+    // window.location.reload();
 })
 
 
