@@ -6,7 +6,7 @@ buyTickects.addEventListener('click', function () {
 });
 
 // Hide Elements
-hideElementById('coupon-container');
+// hideElementById('coupon-container');
 
 // Select Seat
 
