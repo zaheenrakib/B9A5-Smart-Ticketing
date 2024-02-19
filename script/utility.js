@@ -7,6 +7,10 @@ function showElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
 }
+function showButtonById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove('btn-disabled');
+}
 
 function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);

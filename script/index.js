@@ -17,6 +17,8 @@ let totalSeat = 40;
 for (const seat of allSeat) {
     seat.addEventListener('click', function (e) {
 
+        showButtonById('next-btn');
+
         if (count < 4) {
             const curentValue = seat.innerHTML;
 
@@ -83,13 +85,16 @@ const cuponCode = document.getElementById('coupon-btn');
 cuponCode.addEventListener('click', function () {
     const couponValue = document.getElementById("coupon-value");
     const getValue = couponValue.value;
-    console.log(getValue);
 
     const new15 = document.getElementById('new15');
     const newfivten = new15.innerText;
 
     const cuple20 = document.getElementById('couple-twinty');
     const cupleTwinty = cuple20.innerText;
+
+
+
+
 
     //condition
     if(getValue === newfivten){
@@ -102,15 +107,25 @@ cuponCode.addEventListener('click', function () {
 
         //Get Grand total
         const getGrandTotal = document.getElementById('grad-total').innerText;
-        console.log(getGrandTotal);
+
         const calculateGrandTotal = getGrandTotal - calculateDisCount;
-        console.log(calculateGrandTotal);
+
         setInnerText('grad-total', calculateGrandTotal);
 
 
     }
     else if(getValue === cupleTwinty){
+        const firstDisCount = document.getElementById('total-prices').innerText;
+        const calculateDisCount = (firstDisCount * 20) / 100;
+        
+        setInnerText('total-discount',calculateDisCount);
 
+        //Get Grand total
+        const getGrandTotal = document.getElementById('grad-total').innerText;
+
+        const calculateGrandTotal = getGrandTotal - calculateDisCount;
+
+        setInnerText('grad-total', calculateGrandTotal);
     }
     else{
         Swal.fire({
@@ -120,6 +135,9 @@ cuponCode.addEventListener('click', function () {
             confirmButtonText: 'Cool'
           })
     }
+
+    cuponCode.classList.add('btn-disabled');
+
 });
 
 
@@ -129,8 +147,10 @@ nextBtn.addEventListener('click', function () {
     Swal.fire({
         title: "SUCCESS",
         text: "Thank you for Booking Our Bus Seats We are working hard to find the best service and deals for you. Shortly you will find a confirmation in your email.",
-        icon: "success"
+        icon: "success",
+        timer: 1500
     });
+    window.location.reload();
 })
 
 
