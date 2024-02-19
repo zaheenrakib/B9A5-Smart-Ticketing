@@ -107,7 +107,7 @@
                     </div>                 
                     <div class="card  bg-yellow-400 text-black">
                         <div class="card-body items-center text-center">
-                            <h2 class="card-title  font-extrabold">NEW15</h2>
+                            <h2 id="new15" class="card-title  font-extrabold">NEW15</h2>
                             <p>Coupon Code</p>
                         </div>
                         <div class="relative">
@@ -130,7 +130,7 @@
                                    
                     <div class="card  bg-[#F78C9C] text-black">
                         <div class="card-body items-center text-center">
-                            <h2 class="card-title font-extrabold">Couple 20</h2>
+                            <h2 id="couple-twinty" class="card-title font-extrabold">Couple 20</h2>
                             <p>Coupon Code</p>
                         </div>
                         <div class="relative">
@@ -343,18 +343,17 @@
                                             <h2 id="economoy" class="card-title"></h2>
                                             <h2 class="card-title"><span id="dynamic-price" class="text-2xl"></span></h2> -->
                                         </div>
-                                        <!-- <div class="flex justify-between">
-                                            <h2 class="card-title">C2</h2>
-                                            <h2 class="card-title">Economoy</h2>
-                                            <h2 class="card-title"><span class="text-2xl">550</span></h2>
-                                        </div> -->
                                         <hr>
                                         <div class="flex justify-between">
                                             <h1 class="card-title">Total Price</h1>
                                             <h1 class="card-title">BDT <span id="total-prices" class="text-2xl">0</span></h1>
                                         </div>
-                                        <div id="coupon-container" class="join flex items-center justify-center">
-                                            <input id="coupon-value" value="Hello" class="input input-bordered join-item"
+                                        <div id="disCount" class="flex justify-between hidden">
+                                            <h1 class="card-title">Discount Price</h1>
+                                            <h1 class="card-title">BDT <span id="total-discount" class="text-2xl">0</span></h1>
+                                        </div>
+                                        <div id="coupon-container" class="join flex items-center justify-center hidden">
+                                            <input id="coupon-value" class="input input-bordered join-item"
                                                 placeholder="Have any copupon?" />
                                             <button id="coupon-btn"
                                                 class="btn bg-color-primary text-white join-item rounded-r-full">Apply</button>
